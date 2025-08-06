@@ -84,7 +84,7 @@ void main() {
         print('Ingrese el nombre del empleado: ');
         String? name = stdin.readLineSync();
 
-        print('Ingrese las horas lavoradas: ');
+        print('Ingrese las horas laboradas: ');
         int? hour = int.tryParse(stdin.readLineSync()!);
         
         print('Ingrese la tarifa por hora: ');
@@ -93,7 +93,7 @@ void main() {
         int totalDevengado = empleado(hour!, tarifa!);
 
         print('Nombre: $name \n' +
-          'Horas lavoradas: $hour \n' +
+          'Horas laboradas: $hour \n' +
           'Total devengado: $totalDevengado'
         );
 
@@ -109,8 +109,9 @@ void main() {
 
         print('Ingrese el lado b: ');
         double? ladoB = double.tryParse(stdin.readLineSync()!);
-
+        
         double hipotenusa = triangulo(ladoA!, ladoB!);
+        sqrt(hipotenusa);
 
         print('La hipotenusa: $hipotenusa');
 
@@ -124,7 +125,7 @@ void main() {
         
         print('Ingresa la temperatura en grados celsius: ');
         double? Celsius = double.tryParse(stdin.readLineSync()!);
-        
+
         double Fahrenheit =  temperatura(Celsius!);
 
         print('La temperatura en grados Fahrenheit es: $Fahrenheit');
@@ -133,6 +134,11 @@ void main() {
         break;
       case 7:
         return;
+      default:
+        print('La opción ingresada no coincide.');
+        print('');
+        break;
+
       
     }
   }
@@ -155,7 +161,7 @@ int empleado(int hora, int tarifa) {
 }
 
 double triangulo(double a, double b) {
-  return pow(a, 2).toDouble() + pow(b, 2).toDouble();
+  return sqrt(pow(a, 2) + pow(b, 2));
 }
 
 double temperatura(double C) {
