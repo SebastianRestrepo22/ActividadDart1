@@ -121,8 +121,10 @@ void main() {
         /*6. Se tiene un horno en casa con temperaturas en grados Celsius (centígrado), requiere
         transformar la temperatura de 70°C a grados Fahrenheit. Para ello tenga en cuenta la
         siguiente fórmula. F = (C * 1.8) + 32 */
-
-        double Celsius = 70;
+        
+        print('Ingresa la temperatura en grados celsius: ');
+        double? Celsius = double.tryParse(stdin.readLineSync()!);
+        
         double Fahrenheit =  temperatura(Celsius!);
 
         print('La temperatura en grados Fahrenheit es: $Fahrenheit');
